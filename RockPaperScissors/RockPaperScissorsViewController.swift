@@ -75,11 +75,6 @@ class RockPaperScissorsViewController: UIViewController {
         if segue.identifier == "goToHistory" {
             
             if let historyVC = segue.destinationViewController as? HistoryViewController {
-                /*
-                if let gameHistory = history as? [RPSMatch] {
-                    historyVC.gameHistory = gameHistory
-                }
-                 */
                 
                 historyVC.gameHistory = history
             }

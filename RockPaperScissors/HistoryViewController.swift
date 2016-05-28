@@ -15,11 +15,33 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var gameHistory = [RPSMatch]()
     
+    var playerWinCount = 0
+    var cpuWinCount = 0
+    
+    @IBOutlet var playerVictoryCountLbl: UILabel!
+    @IBOutlet var cpuVictoryCountLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        for item in gameHistory {
+            
+            if item.p1.defeats(item.p2) {
+                playerWinCount += 1
+            }
+            
+            if item.p2.defeats(item.p1) {
+                cpuWinCount += 1
+            }
+        }
+        
+        playerVictoryCountLbl.text = String(playerWinCount)
+        cpuVictoryCountLbl.text = String(cpuWinCount)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -44,7 +66,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-
+    @IBAction func backBtnTapped(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     
 }

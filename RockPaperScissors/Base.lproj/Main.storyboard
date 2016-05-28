@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhk-1J-mIf">
-                                <rect key="frame" x="16" y="139" width="288" height="421"/>
+                                <rect key="frame" x="16" y="160" width="288" height="344"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameHistoryCell" rowHeight="92" id="CId-ow-rLn" customClass="GameHistoryCell" customModule="RockPaperScissors" customModuleProvider="target">
@@ -143,7 +143,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eC5-zb-4lO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="21" width="320" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game-History" translatesAutoresizingMaskIntoConstraints="NO" id="DGZ-br-Y8x">
                                         <rect key="frame" x="40" y="8" width="240" height="48"/>
@@ -159,7 +159,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFi-Go-QkC">
-                                <rect key="frame" x="16" y="72" width="189" height="59"/>
+                                <rect key="frame" x="16" y="93" width="189" height="59"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eRj-dM-UtU">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="21"/>
@@ -206,22 +206,37 @@
                                     <constraint firstAttribute="height" constant="59" id="YbW-9w-NVu"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHr-eK-vY3">
+                                <rect key="frame" x="16" y="530" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6QK-g8-ZDD"/>
+                                    <constraint firstAttribute="width" constant="46" id="smv-Ob-uIu"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="mMZ-8k-1Wu" eventType="touchUpInside" id="1SX-7i-Lma"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eC5-zb-4lO" secondAttribute="trailing" id="1ye-oK-X1f"/>
-                            <constraint firstItem="7KV-OC-KjT" firstAttribute="top" secondItem="rhk-1J-mIf" secondAttribute="bottom" constant="8" id="2eC-LY-z33"/>
+                            <constraint firstItem="7KV-OC-KjT" firstAttribute="top" secondItem="rhk-1J-mIf" secondAttribute="bottom" constant="64" id="2eC-LY-z33"/>
                             <constraint firstItem="eC5-zb-4lO" firstAttribute="leading" secondItem="wt9-B7-gBK" secondAttribute="leading" id="7Uc-FG-Pjz"/>
-                            <constraint firstItem="eC5-zb-4lO" firstAttribute="top" secondItem="wt9-B7-gBK" secondAttribute="top" id="Bqm-1q-g6p"/>
+                            <constraint firstItem="eC5-zb-4lO" firstAttribute="top" secondItem="wt9-B7-gBK" secondAttribute="top" constant="21" id="Bqm-1q-g6p"/>
+                            <constraint firstItem="7KV-OC-KjT" firstAttribute="top" secondItem="CHr-eK-vY3" secondAttribute="bottom" constant="8" id="IRA-wP-t41"/>
                             <constraint firstItem="GFi-Go-QkC" firstAttribute="leading" secondItem="wt9-B7-gBK" secondAttribute="leadingMargin" id="N92-6w-v58"/>
                             <constraint firstItem="rhk-1J-mIf" firstAttribute="leading" secondItem="wt9-B7-gBK" secondAttribute="leadingMargin" id="OTO-VG-mXd"/>
                             <constraint firstItem="GFi-Go-QkC" firstAttribute="top" secondItem="eC5-zb-4lO" secondAttribute="bottom" constant="8" id="PSn-bX-9pr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GFi-Go-QkC" secondAttribute="trailing" constant="99" id="Qy1-MN-105"/>
                             <constraint firstItem="rhk-1J-mIf" firstAttribute="trailing" secondItem="wt9-B7-gBK" secondAttribute="trailingMargin" id="Ydn-NX-zJS"/>
+                            <constraint firstItem="CHr-eK-vY3" firstAttribute="leading" secondItem="wt9-B7-gBK" secondAttribute="leadingMargin" id="jJE-ZD-fpo"/>
                             <constraint firstItem="rhk-1J-mIf" firstAttribute="top" secondItem="GFi-Go-QkC" secondAttribute="bottom" constant="8" id="nIp-Lz-bNF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cpuVictoryCountLbl" destination="4DA-D2-C0l" id="TCG-Is-1OA"/>
+                        <outlet property="playerVictoryCountLbl" destination="Ur7-VR-lZ3" id="xN5-Jw-ut9"/>
                         <outlet property="tableView" destination="rhk-1J-mIf" id="eeR-hf-aKP"/>
                     </connections>
                 </viewController>
