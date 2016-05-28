@@ -66,6 +66,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 87.0
+    }
+    
     @IBAction func backBtnTapped(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)

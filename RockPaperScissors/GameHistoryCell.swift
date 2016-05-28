@@ -17,7 +17,7 @@ class GameHistoryCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        outcomeImg.layer.cornerRadius = 15 //postImg.frame.size.width / 2
+        outcomeImg.layer.cornerRadius = outcomeImg.frame.size.width / 2 //15
         outcomeImg.clipsToBounds = true
     }
     

@@ -110,7 +110,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-LJ-hKp">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-LJ-hKp">
                                                     <rect key="frame" x="8" y="11" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="0Nq-N2-LYV"/>
@@ -118,7 +118,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vX-BN-QUk">
-                                                    <rect key="frame" x="86" y="11" width="194" height="21"/>
+                                                    <rect key="frame" x="86" y="8" width="194" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="KfH-nL-GTJ"/>
                                                     </constraints>
@@ -128,7 +128,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0vX-BN-QUk" firstAttribute="top" secondItem="wdk-J7-JY1" secondAttribute="topMargin" constant="3" id="50a-eA-Gby"/>
+                                                <constraint firstItem="0vX-BN-QUk" firstAttribute="top" secondItem="wdk-J7-JY1" secondAttribute="topMargin" id="50a-eA-Gby"/>
                                                 <constraint firstItem="fmK-LJ-hKp" firstAttribute="centerY" secondItem="wdk-J7-JY1" secondAttribute="centerY" id="5fB-sv-We6"/>
                                                 <constraint firstItem="0vX-BN-QUk" firstAttribute="leading" secondItem="fmK-LJ-hKp" secondAttribute="trailing" constant="8" id="68V-zU-N79"/>
                                                 <constraint firstItem="fmK-LJ-hKp" firstAttribute="leading" secondItem="wdk-J7-JY1" secondAttribute="leadingMargin" id="V4W-Fk-tsi"/>
